@@ -1,0 +1,1 @@
+# eleventy-staticrypt-example
