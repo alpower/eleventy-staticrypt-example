@@ -1,0 +1,34 @@
+{
+  "name": "eleventy-staticrypt-example",
+  "version": "1.0.0",
+  "description": "demo for localstorage based password protection for static sites",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @11ty/eleventy --serve --incremental",
+    "start": "npx @11ty/eleventy --serve",
+    "encrypt": "find ./_site/index.html -type f -name '*.html' -exec staticrypt {} please -o {} -f ./src/auth/login.html \\;",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpower/eleventy-staticrypt-example.git"
+  },
+  "keywords": [
+    "jamstack",
+    "password",
+    "encrypt"
+  ],
+  "author": "Al Power",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alpower/eleventy-staticrypt-example/issues"
+  },
+  "homepage": "https://github.com/alpower/eleventy-staticrypt-example#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "staticrypt": "^1.3.2"
+  }
+}

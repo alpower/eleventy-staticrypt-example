@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}">
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Bitter', sans-serif;
+            font-size: 30px;
+            background-color: white;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        p {
+            max-width: 900px;
+            line-height: 1.5;
+        }
+    </style>
+  </head>
+  <body>
+
+    <img src="/img/jurassic-park.svg" alt="logo" class="logo" />
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+
+  </body>
+</html>
